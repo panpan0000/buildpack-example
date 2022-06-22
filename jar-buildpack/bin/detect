@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+JARS=($(ls *.jar))
+
+if [[ ${#JARS[*]} -eq 0 ]];then
+    echo "No .jar detected"
+    exit 100
+fi
+
+if [[ ${#JARS[*]} -gt 1 ]];then
+    echo "More than one .jar detected, use the first one ${JARS[0]}"
+fi
+
+exit 0

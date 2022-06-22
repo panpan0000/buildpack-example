@@ -1,0 +1,18 @@
+# Buildpacks to include in builder
+[[buildpacks]]
+id = "examples/jar-builder"
+version = "0.0.1"
+uri = "../jar-buildpack"
+# Order used for detection
+[[order]]
+    [[order.group]]
+    id = "examples/jar-builder"
+    version = "0.0.1"
+
+# Stack that will be used by the builder
+[stack]
+id = "io.buildpacks.samples.stacks.bionic"
+# This image is used at runtime
+run-image = "peter-java-run-image"
+# This image is used at build-time
+build-image = "cnbs/sample-stack-build:bionic"
