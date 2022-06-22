@@ -3,7 +3,15 @@ Run the step.sh to do all the magic.
 
 
 NOTE: you may need to pull some images(there may be some error promoted)
+```
+cnbs/sample-stack-run:bionic
+cnbs/sample-stack-build:bionic
+buildpacksio/lifecycle:0.13.3
+buildpacksio/pack:latest
+docker.m.daocloud.io/java:8
+```
 
+File Content:
 
 ```
 ├── jar-buildpack # buildpack main logic
@@ -23,3 +31,4 @@ NOTE: you may need to pull some images(there may be some error promoted)
 ├── README.md
 └── step.sh
 ```
+
