@@ -1,8 +1,11 @@
 # Buildpacks to include in builder
 [[buildpacks]]
+#specific a buildpack ID, it could be an exsting image, or a builder code defined locally in a folder
 id = "examples/jar-builder"
 version = "0.0.1"
 uri = "../jar-buildpack"
+#uri specific the buildpack code location. note, the `id` should be aligned.
+
 # Order used for detection
 [[order]]
     [[order.group]]
